@@ -602,7 +602,7 @@ def changePassword(request):
         update_session_auth_hash(request, user) 
         messages.success(request, 'Your password was successfully updated!')
         return redirect('/editProfile')
-    return render(request, 'changePassword.html', content_type={'title':f'Change Password - {request.user.username}'})
+    return render(request, 'changePassword.html', context_type={'title':f'Change Password - {request.user.username}'})
 
 
 def accommodation(request, id):
